@@ -172,6 +172,71 @@ img {
   }
 }
 
+.section-primary {
+  // background: pink;
+  background: url("assets/img/texture-bg.svg") center center no-repeat;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include breakpoint(tablet) {
+      flex-direction: row;
+      text-align: left;
+      gap: 6rem;
+      width: 90vw;
+    }
+    @include breakpoint(desktop) {
+      width: auto;
+    }
+  }
+  &__img {
+    max-width: 40rem;
+    margin: 3rem 0;
+    @include breakpoint(tablet) {
+      max-width: 30rem;
+    }
+    @include breakpoint(desktop) {
+      max-width: 48.8rem;
+      margin: 0;
+    }
+  }
+  &__subtitle {
+    max-width: 77.4rem;
+    margin: 0 0 3.2rem 0;
+  }
+  &__number {
+    display: none;
+  }
+  @include breakpoint(desktop) {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      gap: 14.4rem;
+    }
+    &__text,
+    &__img {
+      flex: 1;
+    }
+    &__subtitle {
+      max-width: 37.4rem;
+    }
+    &__text-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__number {
+      display: block;
+      font-size: 21rem;
+      font-style: italic;
+      font-weight: $fw-extrabold;
+      color: $c-light-blue;
+    }
+  }
+}
+
 .btn {
   background: none;
   border: none;
@@ -355,7 +420,7 @@ img {
 .features {
   position: relative;
   z-index: 2;
-  border: 1px solid red;
+  // border: 1px solid red;
   @include breakpoint(desktop) {
     margin-top: 18rem;
   }
