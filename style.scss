@@ -504,3 +504,25 @@ img {
     }
   }
 }
+
+// companies styles
+.companies {
+  text-align: center;
+  &__title {
+    margin-bottom: 5.7rem;
+    @include breakpoint(tablet) {
+      margin-bottom: 11.4rem;
+    }
+  }
+  .brands {
+    max-width: 105.3rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    @include breakpoint(tablet) {
+      gap: 8rem;
+    }
+  }
+}
